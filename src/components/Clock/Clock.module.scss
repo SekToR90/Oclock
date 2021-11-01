@@ -1,7 +1,33 @@
 .clock {
-    width: 483px;
-    height: 478px;
-
-    background-image: url(../../images/clock.jpg);
+    width: 480px;
+    height: 480px;
+    background-image: url(../../images/oclock.jpg);
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hand {
+    width: 480px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &Second {
+        background-image: url(../../images/second-hand.png);
+    }
+
+    &Mimute {
+        background-image: url(../../images/minute-hand.png);
+    }
+
+    &Hour {
+        background-image: url(../../images/hour-hand.png);
+    }
 }
