@@ -1,6 +1,8 @@
+$imageSize: 480px; 
+
 .clock {
-    width: 480px;
-    height: 480px;
+    width: $imageSize;
+    height: $imageSize;
     background-image: url(../../images/oclock.jpg);
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -10,8 +12,8 @@
 }
 
 .hand {
-    width: 480px;
-    height: 480px;
+    width: $imageSize;
+    height: $imageSize;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

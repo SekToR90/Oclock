@@ -5,21 +5,21 @@ import classes from './Clock.module.scss'
 
 export const Clock: React.FC = () => {
     const [degrees, setDegrees] = useState(calculateDegrees);
- 
-useEffect (() => {
-    const timer = setInterval(() => setDegrees(calculateDegrees()), 1000);
-    return () => clearInterval(timer);
-}, []); 
 
-function calculateDegrees() {
-  let date = new Date();
+    useEffect(() => {
+        const timer = setInterval(() => setDegrees(calculateDegrees()), 1000);
+        return () => clearInterval(timer);
+    }, []);
 
-  return {
-      secondDegrees: Math.floor((360*date.getSeconds())/60),
-      mimuteDegrees: Math.floor((360*date.getMinutes())/60),
-      hourDegrees: Math.floor((360*date.getHours())/24)
+    function calculateDegrees() {
+        let date = new Date();
+
+        return {
+            secondDegrees: Math.floor((360 * date.getSeconds()) / 60),
+            mimuteDegrees: Math.floor((360 * date.getMinutes()) / 60),
+            hourDegrees: Math.floor((360 * date.getHours()) / 24)
+        }
     }
-}
 
     return (
         <div className={classes.clock}>
