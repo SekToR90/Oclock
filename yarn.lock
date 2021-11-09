@@ -2838,7 +2838,7 @@ chardet@^0.7.0:
 
 "chokidar@>=3.0.0 <4.0.0", chokidar@^3.3.0:
   version "3.5.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.2.tgz#dba3976fcadb016f66fd365021d91600d01c1e75"
+  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.2.tgz"
   integrity sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==
   dependencies:
     anymatch "~3.1.2"
@@ -2922,7 +2922,7 @@ class-utils@^0.3.5:
 
 classnames@^2.3.1:
   version "2.3.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@^4.2.3:
@@ -4665,6 +4665,11 @@ follow-redirects@^1.0.0:
   version "1.14.4"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.4.tgz"
   integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+
+fontsource-marck-script@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/fontsource-marck-script/-/fontsource-marck-script-4.0.0.tgz"
+  integrity sha512-XuV4Ip6uJuKHqe1ATX2vI381DmM2o7vC4tHK8x6MZFFbBsuS5dAuEOgt9X5/9vpH6JYTjt0p7Dl1UN4J//cmqA==
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -6988,7 +6993,7 @@ mute-stream@0.0.8:
 
 nan@^2.12.1:
   version "2.15.0"
-  resolved "https://registry.npmjs.org/nan/-/nan-2.15.0.tgz"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 nanomatch@^1.2.9:
@@ -9214,9 +9219,9 @@ sass-loader@8.0.2:
     semver "^6.3.0"
 
 sass@^1.39.0:
-  version "1.42.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.42.1.tgz#5ab17bebc1cb1881ad2e0c9a932c66ad64e441e2"
-  integrity sha512-/zvGoN8B7dspKc5mC6HlaygyCBRvnyzzgD5khiaCfglWztY99cYoiTUksVx11NlnemrcfH5CEaCpsUKoW0cQqg==
+  version "1.43.4"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.43.4.tgz"
+  integrity sha512-/ptG7KE9lxpGSYiXn7Ar+lKOv37xfWsZRtFYal2QHNigyVQDx685VFT/h7ejVr+R8w7H4tmUgtulsKl5YpveOg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 

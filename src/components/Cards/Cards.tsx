@@ -13,13 +13,13 @@ interface CardDataType {
         minute: number
     }
     title: string
-    color: string
+    color: string 
 }
 
 export const Cards: React.FC<CardDataType> = ({ startTask, finishTask, title, color }) => {
 
     return (
-        <div className={classes.card} style={{ background: 'linear-gradient(179.75deg, #DED15A 0.22%, #FCE622 34.44%, #FCE622 94.6%)' }}>
+        <div className={classes.card} style={{ background: color }}>
             <div>
                 <div className={classes.timeComponent}>
                     <div className={classes.imgClock} />

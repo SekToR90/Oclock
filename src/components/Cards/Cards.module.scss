@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: -6px 5px 6px rgba(0, 0, 0, 0.25);
 }
 
 .timeComponent {
@@ -23,7 +24,7 @@
 .time {
     margin: 0;
     padding: 0;
-    font-family: 'Marck Script', "Roboto", "Arial", sans-serif;
+    font-family: "Marck Script", "Roboto", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -33,7 +34,7 @@
 .taskTitle {
     margin: 0 auto 8px;
     max-width: 157px;
-    font-family: 'Marck Script', "Roboto", "Arial", sans-serif;
+    font-family: "Marck Script", "Roboto", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -45,7 +46,7 @@
     background-image: url(../../images/delete-button.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-color: Transparent;
     border: none;
     width: 19px;
     height: 22px;
@@ -54,5 +55,6 @@
 
     &:hover {
         background-image: url(../../images/delete-button-hover.png);
+        cursor: pointer;
     }
 }
