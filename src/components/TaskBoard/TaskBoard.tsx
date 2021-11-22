@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './TaskBoard.module.scss'
-import { Cards } from '../Cards/Cards'
+import { Card } from '../Card/Card'
 import { CardData } from '../../util/CardsData'
 import { NavigationButton } from '../NavigationButton/NavigationButton'
 
@@ -12,7 +12,7 @@ export const TaskBoard: React.FC = () => {
             <NavigationButton />
             <div className={classes.tasks}>
                 {CardData.map(item => (
-                    <Cards {...item} />
+                    <Card {...item} />
                 ))}
                 <button className={classes.addTaskButton} />
             </div>

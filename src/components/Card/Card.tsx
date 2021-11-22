@@ -1,22 +1,16 @@
 import React from 'react';
 
-import classes from './Cards.module.scss'
-
+import classes from './Card.module.scss'
+import { Time } from '../../types/timeType'
 
 interface CardDataType {
-    startTask: {
-        hour: number,
-        minute: number
-    }
-    finishTask: {
-        hour: number,
-        minute: number
-    }
+    startTask: Time
+    finishTask: Time
     title: string
-    color: string 
+    color: string
 }
 
-export const Cards: React.FC<CardDataType> = ({ startTask, finishTask, title, color }) => {
+export const Card: React.FC<CardDataType> = ({ startTask, finishTask, title, color }) => {
 
     return (
         <div className={classes.card} style={{ background: color }}>

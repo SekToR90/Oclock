@@ -3,15 +3,7 @@ import classNames from 'classnames';
 
 import classes from './Clock.module.scss'
 
-export const Clock: React.FC = () => {
-    const [degrees, setDegrees] = useState(calculateDegrees);
-
-    useEffect(() => {
-        const timer = setInterval(() => setDegrees(calculateDegrees()), 1000);
-        return () => clearInterval(timer);
-    }, []);
-
-    function calculateDegrees() {
+function calculateDegrees() {
         let date = new Date();
 
         return {
@@ -20,6 +12,14 @@ export const Clock: React.FC = () => {
             hourDegrees: Math.floor((360 * date.getHours()) / 24)
         }
     }
+
+export const Clock: React.FC = () => {
+    const [degrees, setDegrees] = useState(calculateDegrees);
+
+    useEffect(() => {
+        const timer = setInterval(() => setDegrees(calculateDegrees()), 1000);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <div className={classes.clock}>
