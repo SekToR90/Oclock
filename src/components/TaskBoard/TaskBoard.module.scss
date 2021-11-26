@@ -1,0 +1,40 @@
+.board {
+    display: flex;
+    flex-direction: column;
+    width: (623 * 100%) / 1280;
+    height: 779px;
+    margin-top: -56px;
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 25.85%, rgba(255, 255, 255, 0) 95.44%),
+        url(../../images/board.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -10px 3px 15px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 0px 10px;
+}
+
+.tasks {
+    padding: 21px 40px 33px;
+    display: grid;
+    grid-gap: 14px 19px;
+    grid-template-columns: repeat(auto-fit, 166px);
+}
+
+.addTaskButton {
+    background-image: url(../../images/add-task-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: Transparent;
+    max-width: 166px;
+    height: 153px;
+    border: none;
+    padding: 0;
+
+    &:hover {
+        background-image: url(../../images/add-task-button-hover.png);
+    }
+
+    &:active {
+        background-image: url(../../images/add-task-button-active.png);
+    }
+}

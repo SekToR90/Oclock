@@ -1,0 +1,23 @@
+.navigationElement {
+    width: 100%;
+    height: 56px;
+    display: flex;
+}
+
+.buttonNavigation {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-family: 'Roboto Slab', "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.date {
+    margin: 0;
+}

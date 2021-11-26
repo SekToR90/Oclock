@@ -1,0 +1,60 @@
+.card {
+    max-width: 166px;
+    height: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -6px 5px 6px rgba(0, 0, 0, 0.25);
+}
+
+.timeComponent {
+    margin: 24px auto 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgClock {
+    background-image: url(../../images/img-clock.png);
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+.time {
+    margin: 0;
+    padding: 0;
+    font-family: "Marck Script", "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.taskTitle {
+    margin: 0 auto 8px;
+    max-width: 157px;
+    font-family: "Marck Script", "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.deleteButton {
+    background-image: url(../../images/delete-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: Transparent;
+    border: none;
+    width: 19px;
+    height: 22px;
+    margin: 0 8px 8px 0;
+    align-self: flex-end;
+
+    &:hover {
+        background-image: url(../../images/delete-button-hover.png);
+        cursor: pointer;
+    }
+}
