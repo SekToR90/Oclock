@@ -1,4 +1,4 @@
-export let CardData = [
+export const CardData = [
     {
         startTask: {
             hour : 6 ,
