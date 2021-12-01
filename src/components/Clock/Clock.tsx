@@ -3,6 +3,16 @@ import classNames from 'classnames';
 
 import classes from './Clock.module.scss'
 
+function calculateDegrees() {
+        let date = new Date();
+
+        return {
+            secondDegrees: Math.floor((360 * date.getSeconds()) / 60),
+            mimuteDegrees: Math.floor((360 * date.getMinutes()) / 60),
+            hourDegrees: Math.floor((360 * date.getHours()) / 24)
+        }
+    }
+
 export const Clock: React.FC = () => {
     const [degrees, setDegrees] = useState(calculateDegrees);
 
@@ -19,13 +29,3 @@ export const Clock: React.FC = () => {
         </div>
     );
 }
-
-function calculateDegrees() {
-        let date = new Date();
-
-        return {
-            secondDegrees: Math.floor((360 * date.getSeconds()) / 60),
-            mimuteDegrees: Math.floor((360 * date.getMinutes()) / 60),
-            hourDegrees: Math.floor((360 * date.getHours()) / 24)
-        }
-    }
