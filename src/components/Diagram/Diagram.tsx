@@ -2,23 +2,43 @@ import React, { useEffect, useRef } from 'react';
 
 import * as d3 from "d3";
 
+import { CardData } from '../../util/CardsData'
 // import classes from './Diagram.module.scss'
 
 export const Diagram: React.FC = () => {
     const inputEl = useRef(null);
-    const width: number = 537;
-    const height: number = 530;
+    const innerWH: number = 480; // inner width and height clock component, in pixels
+    const outerWH: number = 530; // outer width and height diagram component, in pixels
 
     useEffect(() => {
+        const innerRadius: number = innerWH / 2;
+        const outerRadius: number = outerWH / 2;
+
+        const startValue = d3.map(CardData, y => (360 * (y.startTask.hour * 60 + y.startTask.minute)) / 1440);
+        const endValue = d3.map(CardData, y => (360 * (y.finishTask.hour * 60 + y.finishTask.minute)) / 1440);
+
+
+        const stroke = innerRadius > 0 ? "none" : "white"; // stroke separating widths
+        const strokeWidth = 1; // width of stroke separating wedges
+        const strokeLinejoin = "round"; // line join of stroke separating wedges
+        const padAngle = stroke === "none" ? 1 / outerRadius : 0;
+
+        const arcs = d3.pie().padAngle(padAngle).sort(null).startAngle(i => startValue[i]).endAngle(i => endValue[i]);
+        const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
 
         const svg: SVGElement | {} | HTMLElement | any = d3.select(inputEl.current)
-            .attr("width", width)
-            .attr("height", height)
-            .attr("viewBox", [-width / 2, -height / 2, width, height])
+            .attr("width", outerWH)
+            .attr("height", outerWH)
+            .attr("viewBox", [-outerWH / 2, -outerWH / 2, outerWH, outerWH])
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
         svg.append("g")
-
+            .attr("stroke", stroke)
+            .attr("stroke-width", strokeWidth)
+            .attr("stroke-linejoin", strokeLinejoin)
+            .selectAll("path")
+            .data(arcs)
+            .attr("d", arc);
     }, [])
 
     return (

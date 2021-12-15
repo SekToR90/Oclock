@@ -25,12 +25,12 @@ export const CardData = [
     },
     {
         startTask: {
-            hour : 8 ,
-            minute: 25
+            hour : 12 ,
+            minute: 10
         },
         finishTask: {
-            hour: 12 ,
-            minute: 10
+            hour: 14 ,
+            minute: 30
         },
         title: 'Мое третье задание на сегодня' ,
         color: 'linear-gradient(179.75deg, #4FC59A 0.22%, #50D780 34.44%, #2EF275 94.6%)'
