@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import classes from './NavigationButton.module.scss'
 
 export const NavigationButton: React.FC = () => {
-    const [isDate, setIsDate] = useState<string>('');
+    const [isDate, setIsDate] = useState('');
 
     useEffect(() => {
         let date = new Date();
