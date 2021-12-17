@@ -2,7 +2,7 @@ export const CardData = [
     {
         startTask: {
             hour : 6 ,
-            minute: 40
+            minute: 4
         },
         finishTask: {
             hour: 8 ,

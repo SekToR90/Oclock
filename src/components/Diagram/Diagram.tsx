@@ -17,14 +17,11 @@ export const Diagram: React.FC = () => {
         const startValue = d3.map(CardData, y => (360 * (y.startTask.hour * 60 + y.startTask.minute)) / 1440);
         const endValue = d3.map(CardData, y => (360 * (y.finishTask.hour * 60 + y.finishTask.minute)) / 1440);
 
-
         const stroke = innerRadius > 0 ? "none" : "white"; // stroke separating widths
         const strokeWidth = 1; // width of stroke separating wedges
         const strokeLinejoin = "round"; // line join of stroke separating wedges
-        const padAngle = stroke === "none" ? 1 / outerRadius : 0;
-
-        const arcs = d3.pie().padAngle(padAngle).sort(null).startAngle(i => startValue[i]).endAngle(i => endValue[i]);
-        const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+        
+        const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius).startAngle(i => startValue[i]).endAngle(i => endValue[i]);
 
         const svg: SVGElement | {} | HTMLElement | any = d3.select(inputEl.current)
             .attr("width", outerWH)
@@ -33,12 +30,14 @@ export const Diagram: React.FC = () => {
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
         svg.append("g")
-            .attr("stroke", stroke)
-            .attr("stroke-width", strokeWidth)
-            .attr("stroke-linejoin", strokeLinejoin)
-            .selectAll("path")
-            .data(arcs)
-            .attr("d", arc);
+                .attr("stroke", stroke)
+                .attr("stroke-width", strokeWidth)
+                .attr("stroke-linejoin", strokeLinejoin)
+            .append("path")
+                .attr("fill", 'green')
+                .attr("d", arc)
+            .join("path")
+            ;
     }, [])
 
     return (
